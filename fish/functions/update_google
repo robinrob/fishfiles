@@ -1,4 +1,0 @@
-# Updates all Google apps installed in OS X. Restart apps for updates to take effect.
-# Alternate location: /Library/Google/GoogleSoftwareUpdate/GoogleSoftwareUpdate.bundle/Contents/Resources/CheckForUpdatesNow.command
-
-/Library/Google/GoogleSoftwareUpdate/GoogleSoftwareUpdate.bundle/Contents/Resources/CheckForUpdatesNow.command

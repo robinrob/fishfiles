@@ -1,3 +1,0 @@
-sudo hostname $1
-$ZDOT_HOME/osx_background.zsh
-$ZDOT_HOME/osx_reset.zsh

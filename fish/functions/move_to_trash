@@ -1,9 +1,0 @@
-files="$@"
-files=(${(s: :)files})
-
-red "Moving files to trash ..."
-for file in $files
-do
-  yellow "\t$file"
-	gmv $file $TRASH_HOME	
-done

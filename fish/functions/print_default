@@ -1,3 +1,0 @@
-local +r Default=$1
-
-/usr/libexec/PlistBuddy -c "Print :$Default 10" ~/Library/Preferences/com.apple.finder.plist

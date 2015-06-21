@@ -1,1 +1,0 @@
-git ls-files --modified 2> /dev/null

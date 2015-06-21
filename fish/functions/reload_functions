@@ -1,3 +1,0 @@
-unload $@
-autoload -U +X load 2> /dev/null
-load $@

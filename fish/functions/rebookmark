@@ -1,4 +1,0 @@
-local +r Bookmark=$1
-
-delete_bookmark_entry $Bookmark
-bookmark $@

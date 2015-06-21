@@ -1,1 +1,0 @@
-browser "https://newsearch.creativecommons.org/search.php?search=$(urlencode $@)&license=4&type=i"

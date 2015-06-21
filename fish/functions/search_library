@@ -1,1 +1,0 @@
-browser "http://capitadiscovery.co.uk/edinburgh/items?query=$(urlencode $@)"

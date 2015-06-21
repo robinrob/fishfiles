@@ -1,6 +1,0 @@
-local +r App=$1
-
-[[ -n $2 ]] && local +r Where=$2 || local +r Where='.'
-
-print "$(green Executing:) $(yellow $App $Where) $(green '...')"
-open -a "$App" $Where &

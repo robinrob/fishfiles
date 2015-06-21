@@ -1,1 +1,0 @@
-rake -g git:foreach["'rake -g save'"]

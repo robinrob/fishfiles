@@ -1,4 +1,0 @@
-case $# in
-  0) browser "http://api.jqueryui.com/" ;;
-  1) browser "http://api.jqueryui.com/$1" ;;
-esac

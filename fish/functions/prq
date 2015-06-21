@@ -1,4 +1,0 @@
-PACKAGE=$1
-
-touch requirements.txt
-print $PACKAGE >> requirements.txt

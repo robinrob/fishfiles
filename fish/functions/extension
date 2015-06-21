@@ -1,6 +1,0 @@
-FILENAME=$1
-
-PARTS=("${(s/./)FILENAME}")
-
-print $PARTS[-1]
-

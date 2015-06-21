@@ -1,4 +1,0 @@
-for key in ${(k)FUNC_ALIASES}
-do
-  alias $key=$FUNC_ALIASES[$key]
-done

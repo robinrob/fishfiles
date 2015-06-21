@@ -1,5 +1,0 @@
-alias | while read line
-do
-  name=$(print $line | gawk -F= '{print $1}')
-  unalias $name
-done

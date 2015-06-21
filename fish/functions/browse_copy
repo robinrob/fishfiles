@@ -1,3 +1,0 @@
-local +r Url=$2
-
-copy $Url && browse $Url

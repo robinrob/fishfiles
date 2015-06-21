@@ -1,8 +1,0 @@
-local +r List=$1; shift
-local +A Items;
-Items=($*)
-
-for item in $Items
-do
-  open $(get_named_list_item $List $item)
-done

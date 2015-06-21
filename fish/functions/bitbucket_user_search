@@ -1,3 +1,0 @@
-local +r User=$1; shift
-
-browser "https://bitbucket.org/$User/profile/repositories?search=$(urlencode $@)"

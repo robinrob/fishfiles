@@ -1,4 +1,0 @@
-for list in $*
-do
-  touch $LISTS_HOME/$list.txt
-done

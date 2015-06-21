@@ -1,1 +1,0 @@
-browser "https://developer.salesforce.com/search?q=$(urlencode $@)"

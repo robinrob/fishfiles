@@ -1,3 +1,0 @@
-gcp -r --preserve=links $GULPFILE_HOME/node_modules ./
-
-cp -r $GULPFILE_HOME/dev-gulpfile.js ./gulpfile.js
