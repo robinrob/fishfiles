@@ -1,0 +1,1 @@
+browser "http://api.jquery.com/$1"

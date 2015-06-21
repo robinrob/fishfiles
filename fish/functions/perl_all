@@ -1,0 +1,26 @@
+local +r PerlExpression=$1
+
+if [[ $# == 1 ]]
+then
+  local +r Where='.'
+  local +r FindExpression='*'
+elif [[ $# == 2 ]]
+then
+  local +r Where='.'
+  local +r FindExpression=$2
+elif [[ $# == 3 ]]
+then
+  local +r Where=$2
+  local +r FindExpression=$3
+fi
+
+
+IFS="
+"
+for file in $(gfind $Where -name "$FindExpression" -type f)
+do
+  # Single-quotes around the $PerlExpression are critical here
+  cmd="perl -p -i -e '$PerlExpression' $file"
+  yellow $cmd
+  eval $cmd
+done

@@ -1,0 +1,7 @@
+local +r File=$1
+
+local +r Last
+Last=$(tail -1 $File)
+
+ghead -n -1 $File
+green $Last

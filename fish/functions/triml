@@ -1,0 +1,3 @@
+TEXT="${(f@)$(cat)}"
+
+print ${TEXT[1,-2]}

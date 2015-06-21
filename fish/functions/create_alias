@@ -1,0 +1,16 @@
+local +r Name=$1
+local +r Value=$2
+local +r AliasFile=$3
+local +r Quiet=$4
+
+if [[ "$(alias_exists $Name $AliasFile)" == "no" ]]
+ then
+	print "alias $Name=\"$Value\"" >> $AliasFile
+
+  alias $Name="$Value"
+
+  if [[ -z $Quiet ]]
+  then
+    print "$(yellow $Name) $(green aliased to) $(yellow $Value)"
+  fi
+fi

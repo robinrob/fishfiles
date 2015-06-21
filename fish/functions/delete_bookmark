@@ -1,0 +1,22 @@
+local success=$FALSE
+local +r -a Bookmarks
+Bookmarks=($*)
+
+for bookmark in $Bookmarks
+do
+  if [[ -n $(bookmark_exists $bookmark) ]]
+  then
+    delete_alias $bookmark > /dev/null
+    delete_bookmark_entry $bookmark
+
+    print "$(red)Bookmark $(yellow)$bookmark $(red)unbookmarked$(default)"
+    success=$TRUE
+  else
+    print "$(maganda)Bookmark $(yellow)$bookmark $(maganda)does not exist$(default)"
+  fi
+done
+
+if [[ $success == $FALSE ]]
+then
+  yellow "No bookmarks changed."
+fi

@@ -1,0 +1,11 @@
+items=($*)
+
+typeset -U alphabet
+
+for item in $items
+do
+  alphabet=($alphabet $(lower $item[1]))
+done
+
+print $alphabet
+

@@ -1,0 +1,12 @@
+local +r Name=$1
+local +r AliasFile=$2
+
+local +r Result
+Result=$(grep "alias $Name=" $AliasFile)
+
+if [[ -n $Result ]]
+then
+	print "yes"	
+else
+	print "no"
+fi

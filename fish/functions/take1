@@ -1,0 +1,14 @@
+(( $#* >= 1 )) || return
+
+LIST=$LISTS_HOME/$1.txt
+
+new_list=$LIST.new
+next=$(head -1 $LIST)
+
+# Cycle the top item to the bottom of the list
+tail +2 $LIST > $new_list
+mv -f $new_list $LIST
+print $next >> $LIST
+
+item=$(print $next | awk -F:: '{print $NF}')
+safari $item  

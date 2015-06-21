@@ -1,0 +1,2 @@
+find . -maxdepth 1 -regex '.*/[a-zA-Z].*' | gsed 's/.\///g'
+

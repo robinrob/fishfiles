@@ -1,0 +1,13 @@
+local +r Bookmark=$1
+
+for bookmark_file in $bookmarks
+do
+  gsed -i '/^'$Bookmark'::/d' $bookmark_file
+done
+
+for file in $alias_files
+do
+  gsed -i '/'$Bookmark'=/d' $file  
+  gsed -i '/^'$Bookmark'::/d' $bookmark_file
+done
+

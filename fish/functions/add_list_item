@@ -1,0 +1,27 @@
+(( $#* < 2 )) && red "Must provide at least name of file and item!" && return
+
+
+local +r ListPath=$1
+local +r NameOrItem=$2
+local +r List=$(basename $ListPath)
+
+
+if [[ -n $(cat $ListPath | ggrep "^$NameOrItem::") ]]
+then
+  print "$(yellow $NameOrItem) $(red already in) $(yellow $List)"
+  cat $ListPath
+
+elif (( $#* == 2 ))
+then
+  print "$NameOrItem" >> $ListPath
+  print "$(yellow $NameOrItem) $(green added to) $(yellow $List)"
+  tailc $ListPath
+
+elif (( $#* >= 3 ))
+then
+  local +r Item="$*[3,-1]"
+
+  print "$NameOrItem::$Item" >> $ListPath
+  print "$(yellow $NameOrItem) $(green added to) $(yellow $List) $(green as) $(yellow $Item)"
+  tailc $ListPath
+fi

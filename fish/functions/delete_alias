@@ -1,0 +1,10 @@
+for alias in $*
+do
+	for file in $alias_files
+	do
+    gsed -i '/alias '$alias'=/d' $file && builtin unalias $alias 2> /dev/null
+	done
+
+  print "$(red)Removed alias: $(yellow)$alias" 
+done
+

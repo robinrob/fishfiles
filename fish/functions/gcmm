@@ -1,0 +1,4 @@
+MSG=$@
+
+git commit -m "$MSG"
+
